@@ -1,0 +1,31 @@
+/* TIPOGRAFÍAS */
+p {
+    font-family: 'DM Sans', sans-serif;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    color: palevioletred;
+}
+
+/* IMAGENES */
+img {
+    width: 200px;
+}
+
+/* DISPLAY */
+.flex_container {
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+}
+.flex_right {
+    justify-content: flex-end;
+    padding-left: 30px;
+}
+.flex_left {
+    justify-content: flex-start;
+    order: -1;
+}

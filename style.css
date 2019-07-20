@@ -1,0 +1,261 @@
+/* AJUSTES GENERALES */
+body {
+    /* flex: 100%;   */
+    margin: 0px;  
+}
+/* .main_container {
+    width: 1000px;
+    margin: 0px auto;
+} */
+.flex_container {
+    display: flex;
+}
+.flex_center {
+    justify-content: center;
+} 
+.flex_right {
+    justify-content: flex-end;
+}
+.flex_left {
+    justify-content: flex-start;
+}
+.flex_space_around {
+    justify-content: space-around;
+}
+.flex_middle {
+    align-items: center;
+}
+.flex_column  {
+    flex-direction: column;
+}
+.flex_wrap {
+    flex-wrap: wrap;
+}
+
+/* TIPOGRAFÍAS */
+span, p, a {
+    font-family: 'DM Sans', sans-serif;
+}
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+a {
+    text-decoration: none;
+}
+
+/* ICONOS e IMAGENES */
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-image: url("portada/Karina.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.flag img {
+    width: 110px;
+    height: 80px;
+}
+/* NAV */
+/* Underline From Center */
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background:#BBC7D7;
+    height: 2px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+  }
+
+/* PORTADA */
+#portada {
+    position: absolute;
+    mix-blend-mode: multiply;
+}
+#portada img,
+#presentacion {
+    height: calc(100vh - 30px);
+}
+nav#menu_principal {
+    background-color: white;
+}
+nav#menu_principal a {
+    color: palevioletred;
+    padding: 5px;
+}
+
+/* SECCIONES */
+section  {
+    margin: 0px 16px;
+}
+section h2 {
+    border-bottom: 1px solid palevioletred;
+}
+
+/* CARD */
+.card {
+    flex: 40%;
+    display: flex;
+    margin: 20px;
+}
+.card p {
+    margin-top: 0px;
+}
+.card a, a:visited {
+    color: rgb(153, 140, 151);
+}
+.title {
+    order: 1;
+    margin-left: 16px;
+}
+.title h3 {
+    color: black;
+    font-style: bold;
+    margin: 0px;
+}
+.year {
+    flex-basis: 50px;
+    order: -1;
+}
+.year>div {
+    background-color: palevioletred;
+    text-align: center;
+    margin-top: 5px;
+}
+.year span {
+    color: white;
+    font-weight: bold;
+}
+
+/* SIDE */
+#idiomas {
+    flex: 30%;
+}
+
+/* PROGRAMACION  */
+#programacion {
+    flex: 70%;
+}
+#programacion .thumbimg {
+    margin: 20px 40px;
+}
+#programacion .thumbimg img {
+    height: 80px;
+}
+#programacion .thumb_mini img {
+    height: 40px;
+}
+#programacion .thumbimg {
+    filter: grayscale(1);
+    transition-duration: 0.5s;
+}
+#programacion .thumbimg:hover {
+    filter: grayscale(0);
+}
+
+/* PORTAFOLIO */
+#portafolio .thumbimg img {
+    width: 170px;
+}
+#portafolio .thumbimg {
+    opacity: 0.5;
+    transition-duration: 0.5s;
+}
+#portafolio .thumbimg:hover {
+    opacity: 1;
+}
+
+
+/* RESPONSIVE */
+/* Extra small devices (phones, 639px and down) */
+@media only screen and (max-width: 639px) {
+    .main_container {
+        flex-wrap: wrap;
+    }
+    #portada img,
+    #presentacion {
+    width: 100vw;
+    }
+    nav#menu_principal  {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .flex_container {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    section {
+        margin: 0px 15px;
+    }
+    #container_programacion_idiomas {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #idiomas .card {
+        margin-bottom: 60px;
+    }
+    #idiomas .card:last-child {
+        margin-bottom: 30px;
+    }
+    .level, .flag img {
+        height: 70px;
+    }
+    #programacion .thumbimg img {
+        width: 80px;
+        height: 60px;
+    }
+    #programacion .thumb_mini img {
+        height: 80px;
+    }
+    #portafolio .thumbimg img {
+        width: 150px;
+    }
+} 
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container {
+        flex-basis: 900px;
+    }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1200px) {
+    .main_container {
+        width: 1000px;
+        margin: 0px auto;
+    }
+
+} 
+
+
+/*  PENDIENTE !
+    - Arreglar el responsive y el breaking-line
+   
+    
+
+*/
