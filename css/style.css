@@ -59,7 +59,7 @@ a {
     width: 200px;
     height: 200px;
     border-radius: 100%;
-    background-image: url("/img/portada/Karina.jpg");
+    background-image: url("../img/portada/karinakorn.jpg");
     background-position: center;
     background-size: cover;
 }
